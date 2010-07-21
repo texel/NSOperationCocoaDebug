@@ -18,8 +18,9 @@
   task.launchPath = @"/bin/sleep";
   task.arguments  = [NSArray arrayWithObject:@"2"];
   
-  [task waitUntilExit];
   [task launch];
+  [task waitUntilExit];
+
   [task release]; // Without this release, the runLoop will never terminate.
 }
 
